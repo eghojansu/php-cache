@@ -1,7 +1,7 @@
 {
-    "name": "ekok/php-lib-bootstrap",
-    "description": "PHP Lib Bootstrap",
-    "type": "project",
+    "name": "ekok/php-cache",
+    "description": "PHP Cache",
+    "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
     "authors": [
@@ -10,6 +10,11 @@
             "email": "setiawanegho@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Ekok\\Cache\\": "src/"
+        }
+    },
     "require": {
         "php": ">=8.0"
     },
