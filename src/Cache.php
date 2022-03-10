@@ -4,10 +4,10 @@ namespace Ekok\Cache;
 
 class Cache
 {
-    protected $ref;
-    protected $dsn;
-    protected $seed;
-    protected $driver;
+    private $ref;
+    private $dsn;
+    private $seed;
+    private $driver;
 
     public function __construct(string|bool $dsn = null, string $seed = null)
     {
