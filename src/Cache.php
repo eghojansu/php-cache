@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ekok\Cache;
 
 class Cache
@@ -22,7 +24,7 @@ class Cache
         $this->seed = $seed ?? 'cache';
 
         list($this->driver, $this->ref) = match(true) {
-            !!preg_match('/(?:folder|directory|dir)\h*=\h*(.+)\h*/i', $this->dsn, $match) => array('folder', rtrim(strtr($match[1], '\\', '/'), '/') . '/'),
+            !!preg_match('/(?:folder|directory|dir)\h*=\h*(.+)\h*/i', $this->dsn ?? '', $match) => array('folder', rtrim(strtr($match[1], '\\', '/'), '/') . '/'),
             default => array(null, null),
         };
 
