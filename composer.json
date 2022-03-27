@@ -3,7 +3,6 @@
     "description": "PHP Cache",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Eko Kurniawan",
